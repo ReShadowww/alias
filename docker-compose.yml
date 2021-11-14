@@ -11,11 +11,11 @@ services:
     build: .
     restart: always
     ports:
-      - '5005:5005'
+      - '5007:5007'
     labels:
       - traefik.http.routers.alias.rule=Host(`alias.reshadow.lt`)
       - traefik.http.routers.alias.tls=true
       - traefik.http.routers.alias.tls.certresolver=myresolver
-      - traefik.port=5005
+      - traefik.port=5007
     networks:
       - web
