@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<title>Tai (ne) Alias</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+  body,
+  h1 {
+    font-family: "Raleway", sans-serif
+  }
+
+  body,
+  html {
+    height: 100%
+  }
+
+  .bgimg {
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  body {
+    background-color: #131515;
+  }
+
+  .button {
+    background-color: #272B2B;
+    border: none;
+    color: white;
+    padding: 16px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    justify-self: center;
+  }
+
+  .button1:hover {
+    background-color: #555555;
+    color: white;
+  }
+</style>
+
+<body>
+
+  <script type=text/javascript src="{{
+  url_for('static', filename='jquery.js') }}"></script>
+
+  <script type=text/javascript>
+    $SCRIPT_ROOT = {{ request.script_root|tojson }};
+  </script>
+
+    {% block body %}{% endblock %}
+
+</body>
+
+</html>

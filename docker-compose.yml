@@ -1,0 +1,21 @@
+version: '3'
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+  alias:
+    build: .
+    restart: always
+    ports:
+      - '5005:5005'
+    labels:
+      - traefik.http.routers.alias.rule=Host(`alias.reshadow.lt`)
+      - traefik.http.routers.alias.tls=true
+      - traefik.http.routers.alias.tls.certresolver=myresolver
+      - traefik.port=5005
+    networks:
+      - web
