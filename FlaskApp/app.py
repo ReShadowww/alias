@@ -22,7 +22,7 @@ def gen_cards():
     i = 1
     while i < 9:
         rand = random.randint(0, len(words) - 1)
-        if words[rand]["kalbos_dalis"] and int(words[rand]["pavartojimo_daznis"]) > 1:
+        if words[rand]["kalbos_dalis"] and int(words[rand]["pavartojimo_daznis"]) > 5:
             cards.append(words[rand]["zodis"].capitalize())
             i += 1
     return cards
