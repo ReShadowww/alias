@@ -22,11 +22,10 @@ def gen_cards():
     i = 1
     while i < 9:
         rand = random.randint(0, len(words) - 1)
-        if words[rand]["kalbos_dalis"] and int(words[rand]["pavartojimo_daznis"]) > 5:
+        if words[rand]["kalbos_dalis"] and int(words[rand]["pavartojimo_daznis"]) > 2:
             cards.append(words[rand]["zodis"].capitalize())
             i += 1
     return cards
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5007)
-    # app.run(debug=True)
+    app.run(debug=True)

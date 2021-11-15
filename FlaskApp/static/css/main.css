@@ -1,0 +1,39 @@
+body,
+h1 {
+  font-family: "Raleway", sans-serif
+}
+
+body,
+html {
+  height: 100%
+}
+
+.bgimg {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+body {
+  background-color: #131515;
+}
+
+.button {
+  background-color: #272B2B;
+  border: none;
+  color: white;
+  padding: 16px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  justify-self: center;
+}
+
+.button1:hover {
+  background-color: #555555;
+  color: white;
+}
