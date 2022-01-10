@@ -1,46 +1,49 @@
-{% extends 'base.html' %}
+{% extends 'layout.html' %}
 
 {% block head %}{% endblock %}
 
 {% block body %}
+
 <script type=text/javascript>
-    $(function() {
-      $('a#new_card').bind('click', function() {
-        $.getJSON($SCRIPT_ROOT + '/_new_card', {
-        }, function(data) {
-          $("#l0").text(data[0]);
-          $("#l1").text(data[1]);
-          $("#l2").text(data[2]);
-          $("#l3").text(data[3]);
-          $("#l4").text(data[4]);
-          $("#l5").text(data[5]);
-          $("#l6").text(data[6]);
-          $("#l7").text(data[7]);
-        });
-        return false;
+  $(function() {
+    $('a#new_card').bind('click', function() {
+      $.getJSON($SCRIPT_ROOT + '/_new_card', {
+      }, function(data) {
+        $("#l0").text(data[0]);
+        $("#l1").text(data[1]);
+        $("#l2").text(data[2]);
+        $("#l3").text(data[3]);
+        $("#l4").text(data[4]);
+        $("#l5").text(data[5]);
+        $("#l6").text(data[6]);
+        $("#l7").text(data[7]);
       });
+      return false;
     });
-  </script>
+  });
+</script>
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-    <div class="w3-display-middle">
-        <h1 class="w3-jumbo">Kortelė:</h1>
-        <hr class="w3-border-grey" style="margin:auto;width:100%">
-        <p class="w3-large w3-center">
-        <ol class="w3-xlarge">
-            <li id="l0"></li>
-            <li id="l1"></li>
-            <li id="l2"></li>
-            <li id="l3"></li>
-            <li id="l4"></li>
-            <li id="l5"></li>
-            <li id="l6"></li>
-            <li id="l7"></li>
-        </ol>
-        </p>
-        <a href="#" id="new_card"><button class="button button1">Nauja kortelė</button></a>
-    </div>
+<div>
+
+  <div class="text-center">
+    <h1>Kortelė:</h1>
+  </div>
+
+  <ol style="width: 13rem;">
+    <!-- <li>123456789012345</li> -->
+    <li id="l0"></li>
+    <li id="l1"></li>
+    <li id="l2">The best way</li>
+    <li id="l3">to explain it</li>
+    <li id="l4">is</li>
+    <li id="l5">to do it</li>
+    <li id="l6"></li>
+    <li id="l7"></li>
+  </ol>
+
+  <div class="text-center">
+    <a class="btn btn-light" href="#" id="new_card" role="button">Nauja kortelė</a>
+  </div>
 </div>
-
 
 {% endblock %}

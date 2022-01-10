@@ -4,15 +4,13 @@ import random
 
 app = Flask(__name__)
 
-with open("lt-alias-picked.json", "r", encoding="UTF-8") as fin:
-    words = json.load(fin)
 
-@app.route('/')
+@app.route("/")
 def index():
     return render_template("index.html")
 
 
-@app.route('/_new_card')
+@app.route("/_new_card")
 def add_numbers():
     return jsonify(gen_cards())
 
@@ -27,6 +25,10 @@ def gen_cards():
             i += 1
     return cards
 
+
 if __name__ == "__main__":
+    with open("lt-alias-picked.json", "r", encoding="UTF-8") as fin:
+        words = json.load(fin)
+
     app.run(host="0.0.0.0")
     # app.run(debug=True)
