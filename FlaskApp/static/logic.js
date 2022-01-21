@@ -22,7 +22,7 @@ function trackScore(clicked_id) {
     // let score = good + " - " + bad + " = " + (good - bad);
     // document.getElementById("word").textContent = score;
 
-    document.getElementById("word").textContent = "Surinkti taškai: " + good;
+    document.getElementById("word").textContent = "Teisingai atsakyti: " + good;
 
     good = 0;
     bad = 0;
